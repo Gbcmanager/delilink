@@ -1,173 +1,143 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="th">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gimbocha Tea House | Delivery</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Mitr:wght@200;300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-      :root {
-        /* โทนสีตามภาพอ้างอิง */
-        --bg-color: #e5dac1; /* สีพื้นหลังครีม/กากี */
-        --title-color: #346881; /* สีน้ำเงินอมเขียว สำหรับชื่อร้าน */
-        --btn-bg: #fdfae3; /* สีพื้นหลังปุ่ม สีเหลืองอ่อน */
-        --btn-text: #a03833; /* สีตัวอักษรบนปุ่ม สีแดงอิฐ */
-        --dots-color: #c4a993; /* สีจุดสามจุด */
-        --btn-hover-bg: #f4efce; /* สีปุ่มตอนเอาเมาส์ชี้ */
-      }
+        :root {
+            --bg-color: #e5dac1;      
+            --title-color: #346881;   
+            --btn-bg: #fdfae3;        
+            --btn-text: #a03833;      
+            --dots-color: #c4a993;    
+            --btn-hover-bg: #f4efce;  
+        }
 
-      body {
-        margin: 0;
-        padding: 0;
-        /* เรียกใช้ฟอนต์ Mitr เป็นหลัก */
-        font-family: "Mitr", "IBM Plex Sans Thai", sans-serif;
-        background-color: var(--bg-color);
-        display: flex;
-        justify-content: center;
-        min-height: 100vh;
-      }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Mitr', 'IBM Plex Sans Thai', sans-serif;
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
 
-      .container {
-        width: 100%;
-        max-width: 680px;
-        padding: 48px 24px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        box-sizing: border-box;
-      }
+        .container {
+            width: 100%;
+            max-width: 680px;
+            padding: 48px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-sizing: border-box;
+        }
 
-      /* รูปโปรไฟล์ */
-      .profile-img {
-        width: 96px;
-        height: 96px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 16px;
-        background-color: #fff;
-      }
+        .profile-img {
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 16px;
+            background-color: #fff;
+        }
 
-      /* ชื่อร้าน */
-      .profile-name {
-        font-size: 24px;
-        font-weight: 500;
-        margin: 0 0 4px 0;
-        text-align: center;
-        color: var(--title-color);
-        letter-spacing: 0.5px;
-      }
+        .profile-name {
+            font-size: 24px;
+            font-weight: 500;
+            margin: 0 0 4px 0;
+            text-align: center;
+            color: var(--title-color);
+            letter-spacing: 0.5px;
+        }
 
-      /* คำอธิบาย */
-      .profile-bio {
-        font-size: 16px;
-        font-weight: 400;
-        margin: 0 0 32px 0;
-        text-align: center;
-        color: var(--title-color);
-      }
+        .profile-bio {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 0 0 32px 0;
+            text-align: center;
+            color: var(--title-color);
+        }
 
-      /* กล่องรวมลิงก์ */
-      .links-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
+        .links-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
 
-      /* สไตล์ปุ่ม */
-      .link-btn {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 60px;
-        padding: 16px 40px;
-        background-color: var(--btn-bg);
-        color: var(--btn-text);
-        text-decoration: none;
-        font-size: 18px; /* ปรับขนาดฟอนต์ปุ่มให้พอดีกับฟอนต์ Mitr */
-        font-weight: 400;
-        border-radius: 30px;
-        box-sizing: border-box;
-        transition:
-          transform 0.15s ease,
-          background-color 0.15s ease;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-        border: none;
-      }
+        .link-btn {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            min-height: 60px;
+            padding: 16px 40px;
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            text-decoration: none;
+            font-size: 18px; 
+            font-weight: 400;
+            border-radius: 30px; 
+            box-sizing: border-box;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+            border: none;
+        }
 
-      .link-btn:hover {
-        background-color: var(--btn-hover-bg);
-        transform: scale(1.02);
-      }
+        .link-btn:hover {
+            background-color: var(--btn-hover-bg);
+            transform: scale(1.02);
+        }
 
-      /* จุดสามจุดด้านขวา */
-      .dots {
-        position: absolute;
-        right: 20px;
-        color: var(--dots-color);
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 1;
-      }
+        .dots {
+            position: absolute;
+            right: 20px;
+            color: var(--dots-color);
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 1;
+        }
+
     </style>
-  </head>
-  <body>
+</head>
+<body>
+
     <div class="container">
-      <img
-        src="https://images.unsplash.com/photo-1576092762791-dd9e2220abd4?w=400&q=80"
-        alt="Gimbocha Logo"
-        class="profile-img"
-      />
+        <img src="profile.jpg" alt="Gimbocha Logo" class="profile-img">
+        
+        <h1 class="profile-name">Gimbocha Tea House</h1>
+        <p class="profile-bio">Delivery 🛵</p>
 
-      <h1 class="profile-name">Gimbocha Tea House</h1>
-      <p class="profile-bio">Delivery 🛵</p>
+        <div class="links-container">
+            <a href="https://r.grab.com/g/6-20260225_164853_34767DDBAE3E4B5B833287545360AA0A_MEXMPS-3-C7XDAJMUGUDBJ6" target="_blank" class="link-btn">
+                GRAB สาขาสนามกีฬา
+                <span class="dots">⋮</span>
+            </a>
 
-      <div class="links-container">
-        <a
-          href="https://r.grab.com/g/6-20260225_164853_34767DDBAE3E4B5B833287545360AA0A_MEXMPS-3-C7XDAJMUGUDBJ6"
-          target="_blank"
-          class="link-btn"
-        >
-          GRAB สาขาสนามกีฬา
-          <span class="dots">⋮</span>
-        </a>
+            <a href="https://lin.ee/01QO9nh?openExternalBrowser=1" target="_blank" class="link-btn">
+                LINE MAN สาขาสนามกีฬา
+                <span class="dots">⋮</span>
+            </a>
 
-        <a
-          href="https://lin.ee/01QO9nh?openExternalBrowser=1"
-          target="_blank"
-          class="link-btn"
-        >
-          LINE MAN สาขาสนามกีฬา
-          <span class="dots">⋮</span>
-        </a>
+            <a href="https://r.grab.com/g/6-20260225_164840_34767DDBAE3E4B5B833287545360AA0A_MEXMPS-3-C7XDAJMYAUAJSE" target="_blank" class="link-btn">
+                GRAB สาขาเสาชิงช้า
+                <span class="dots">⋮</span>
+            </a>
 
-        <a
-          href="https://r.grab.com/g/6-20260225_164840_34767DDBAE3E4B5B833287545360AA0A_MEXMPS-3-C7XDAJMYAUAJSE"
-          target="_blank"
-          class="link-btn"
-        >
-          GRAB สาขาเสาชิงช้า
-          <span class="dots">⋮</span>
-        </a>
-
-        <a
-          href="https://lin.ee/NzKJSBq?openExternalBrowser=1"
-          target="_blank"
-          class="link-btn"
-        >
-          LINEMAN สาขาเสาชิงช้า
-          <span class="dots">⋮</span>
-        </a>
-      </div>
+            <a href="https://lin.ee/NzKJSBq?openExternalBrowser=1" target="_blank" class="link-btn">
+                LINEMAN สาขาเสาชิงช้า
+                <span class="dots">⋮</span>
+            </a>
+        </div>
     </div>
-  </body>
+
+</body>
 </html>
