@@ -39,28 +39,38 @@
             box-sizing: border-box;
         }
 
+        /* --- ส่วนที่แก้ไข: รูปโปรไฟล์ --- */
         .profile-img {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
+            /* แก้ไขขนาดให้ใหญ่ขึ้น 2 เท่า (จาก 96px เป็น 192px) */
+            width: 192px;
+            height: 192px;
+            
+            /* ลบ border-radius: 50%; ออก เพื่อไม่ให้เป็นวงกลม */
+            /* ใส่ขอบมนเล็กน้อยให้ดูสวยงาม (ถ้าอยากได้สี่เหลี่ยมจัตุรัสเลย ให้แก้เป็น 0px) */
+            border-radius: 24px; 
+            
             object-fit: cover;
-            margin-bottom: 16px;
+            margin-bottom: 24px; /* เพิ่มระยะห่างด้านล่างอีกนิด */
             background-color: #fff;
+            
+            /* เพิ่มเงาให้รูปดูมีมิติขึ้น */
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
         }
+        /* ------------------------------ */
 
         .profile-name {
-            font-size: 24px;
-            font-weight: 500;
-            margin: 0 0 4px 0;
+            font-size: 28px; /* เพิ่มขนาดฟอนต์ชื่อร้านอีกนิดให้สมดุลกับรูปที่ใหญ่ขึ้น */
+            font-weight: 600;
+            margin: 0 0 8px 0;
             text-align: center;
             color: var(--title-color);
             letter-spacing: 0.5px;
         }
 
         .profile-bio {
-            font-size: 16px;
+            font-size: 18px; /* เพิ่มขนาดฟอนต์คำอธิบายอีกนิด */
             font-weight: 400;
-            margin: 0 0 32px 0;
+            margin: 0 0 40px 0; /* เพิ่มระยะห่างก่อนถึงปุ่ม */
             text-align: center;
             color: var(--title-color);
         }
@@ -78,30 +88,31 @@
             align-items: center;
             justify-content: center;
             width: 100%;
-            min-height: 60px;
+            min-height: 64px; /* เพิ่มความสูงปุ่มอีกนิด */
             padding: 16px 40px;
             background-color: var(--btn-bg);
             color: var(--btn-text);
             text-decoration: none;
             font-size: 18px; 
-            font-weight: 400;
-            border-radius: 30px; 
+            font-weight: 500;
+            border-radius: 32px; 
             box-sizing: border-box;
-            transition: transform 0.15s ease, background-color 0.15s ease;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+            transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             border: none;
         }
 
         .link-btn:hover {
             background-color: var(--btn-hover-bg);
-            transform: scale(1.02);
+            transform: translateY(-2px); /* ขยับขึ้นนิดนึงตอนชี้ */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* เพิ่มเงาตอนชี้ */
         }
 
         .dots {
             position: absolute;
-            right: 20px;
+            right: 24px;
             color: var(--dots-color);
-            font-size: 20px;
+            font-size: 22px;
             font-weight: 600;
             line-height: 1;
         }
@@ -111,7 +122,7 @@
 <body>
 
     <div class="container">
-        <img src="profile.jpg" alt="Gimbocha Logo" class="profile-img">
+        <img src="profile.png" alt="Gimbocha Logo" class="profile-img">
         
         <h1 class="profile-name">Gimbocha Tea House</h1>
         <p class="profile-bio">Delivery 🛵</p>
